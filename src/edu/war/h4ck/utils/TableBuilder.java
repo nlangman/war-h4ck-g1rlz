@@ -17,8 +17,8 @@ public class TableBuilder {
         table.append(getPadding(spacesNeeded, " ")).append(content);
     }
 
-    public static void addSpacerRow(StringBuilder table, String titleRow) {
-        table.append("|").append(getPadding(titleRow.length()-2, "-")).append("|").append("\n");
+    public static void addSpacerRow(StringBuilder table, String referenceRow) {
+        table.append("|").append(getPadding(referenceRow.length()-2, "-")).append("|").append("\n");
     }
 
     public static int getLocationFromLastWord(StringBuilder table, String referenceRow, String columnHeader ) {

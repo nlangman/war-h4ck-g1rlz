@@ -18,7 +18,9 @@ public class Main {
             System.out.println("You selected [" + userInput + "]. Great choice! Here you go...");
             switch (userInput.toLowerCase()) {
                 case "a" -> showPrimitives();
-                case "b" -> System.out.println("Nothing yet.");
+                case "b" -> {
+                    System.out.println(BooleanOperatorBuilder.getBooleanOperatorTable().toString());
+                }
                 case "q" -> done = true;
                 default -> System.out.println("I couldn't find your selection [" + userInput + "]. Please try again.");
             }
