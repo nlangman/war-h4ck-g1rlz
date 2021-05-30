@@ -15,7 +15,7 @@ public class Main {
         while (!done) {
             showMenu();
             userInput = inputReader.nextLine();
-            System.out.println("You selected ["+userInput+"]. Great choice! Here you go...");
+            System.out.println("You selected [" + userInput + "]. Great choice! Here you go...");
             switch (userInput.toLowerCase()) {
                 case "a" -> showPrimitives();
                 case "b" -> System.out.println("Nothing yet.");
@@ -36,7 +36,7 @@ public class Main {
         menu.append("E.").append("\n");
         System.out.println(menu.toString());
     }
-
+    //to-do factor me.
     private static void showPrimitives() {
         StringBuilder primitiveTable = new StringBuilder();
         // We build up the title row for our table first.
@@ -60,17 +60,17 @@ public class Main {
         TableBuilder.addColumnContent(primitiveTable, titleRow, "Type", "boolean");
         TableBuilder.addColumnContent(primitiveTable, titleRow, "Definition", "Logical Value");
         TableBuilder.addColumnContent(primitiveTable, titleRow, "Range or Value", "true or false");
-        TableBuilder. addColumnContent(primitiveTable, titleRow, "Wrapper", "java.lang.Boolean");
-        TableBuilder. padEndOfRow(primitiveTable, titleRow, 3, false);
+        TableBuilder.addColumnContent(primitiveTable, titleRow, "Wrapper", "java.lang.Boolean");
+        TableBuilder.padEndOfRow(primitiveTable, titleRow, 3, false);
         // Add Row 4
-        TableBuilder. addSpacerRow(primitiveTable, titleRow);
+        TableBuilder.addSpacerRow(primitiveTable, titleRow);
         // Add Row 5
         primitiveTable.append("|");
         TableBuilder.addColumnContent(primitiveTable, titleRow, "Type", "char");
-        TableBuilder. addColumnContent(primitiveTable, titleRow, "Definition", "16-bit unicode");
-        TableBuilder. addColumnContent(primitiveTable, titleRow, "Range or Value", "64k characters");
+        TableBuilder.addColumnContent(primitiveTable, titleRow, "Definition", "16-bit unicode");
+        TableBuilder.addColumnContent(primitiveTable, titleRow, "Range or Value", "64k characters");
         TableBuilder.addColumnContent(primitiveTable, titleRow, "Wrapper", "java.lang.Character");
-        TableBuilder. padEndOfRow(primitiveTable, titleRow, 5, false);
+        TableBuilder.padEndOfRow(primitiveTable, titleRow, 5, false);
         // Add row 6
         TableBuilder.addSpacerRow(primitiveTable, titleRow);
         // add row 7
@@ -106,7 +106,7 @@ public class Main {
         TableBuilder.addColumnContent(primitiveTable, titleRow, "Definition", "64 bit signed");
         TableBuilder.addColumnContent(primitiveTable, titleRow, "Range or Value", "-9.2e18 to 9.2e18");
         TableBuilder.addColumnContent(primitiveTable, titleRow, "Wrapper", "java.lang.Long");
-        TableBuilder.padEndOfRow(primitiveTable,titleRow, 13, false);
+        TableBuilder.padEndOfRow(primitiveTable, titleRow, 13, false);
         // add row 14
         TableBuilder.addSpacerRow(primitiveTable, titleRow);
         // add row 15
@@ -115,7 +115,7 @@ public class Main {
         TableBuilder.addColumnContent(primitiveTable, titleRow, "Definition", "32 bit floating point");
         TableBuilder.addColumnContent(primitiveTable, titleRow, "Range or Value", "6-7 significant spaces");
         TableBuilder.addColumnContent(primitiveTable, titleRow, "Wrapper", "java.lang.Float");
-        TableBuilder.padEndOfRow(primitiveTable,titleRow, 15, false);
+        TableBuilder.padEndOfRow(primitiveTable, titleRow, 15, false);
         // add row 16
         TableBuilder.addSpacerRow(primitiveTable, titleRow);
         // add row 17
