@@ -3,7 +3,7 @@
 
 We will be using the following resources:
 
-1. IntelliJ IDEA
+1. [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/#section=mac)
     1. "Code with Me" - so we can collaborate and learn together.
 1. Coretto JDK  or Open JDK 16.01 (we will download our JDK through IntelliJ)
 1. [Duke University Coursera Course "Java Programming: Solving Problems with Software"](https://www.coursera.org/learn/java-programming?specialization=java-programming)
