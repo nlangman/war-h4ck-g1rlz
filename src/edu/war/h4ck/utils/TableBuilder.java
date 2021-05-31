@@ -4,11 +4,16 @@ import org.jetbrains.annotations.NotNull;
 
 public class TableBuilder {
 
-    public static void padEndOfRow(StringBuilder primitiveTable, String titleRow, int rowNumber, boolean isLastRow) {
-        int space = (primitiveTable.lastIndexOf("|") + (titleRow.length()-1)) - primitiveTable.length();
-        primitiveTable.append(getPadding(space," ")).append("|");
+    public static void padEndOfRow(StringBuilder table, String referenceRow, int rowNumber, boolean isLastRow) {
+        int lastIndexOfBar = table.lastIndexOf("|");
+        if ((table.indexOf("||") != table.lastIndexOf("||")) && (lastIndexOfBar == table.lastIndexOf("||")+1) ) {
+            lastIndexOfBar = table.lastIndexOf("|", table.indexOf("||")-2);
+        }
+
+        int space = (lastIndexOfBar + (referenceRow.length()-1)) - table.length();
+        table.append(getPadding(space," ")).append("|");
         if (!isLastRow) {
-            primitiveTable.append("\n");
+            table.append("\n");
         }
     }
 
@@ -22,21 +27,25 @@ public class TableBuilder {
     }
 
     public static int getLocationFromLastWord(StringBuilder table, String referenceRow, String columnHeader ) {
+        int lastIndexOfBar = table.lastIndexOf("|");
+        if (lastIndexOfBar == (table.lastIndexOf("||")+1)) {
+            lastIndexOfBar = table.lastIndexOf("|", lastIndexOfBar-2);
+        }
         // last index of table being built, offset of word in title row of table
-        int locationForNextWord = table.lastIndexOf("|") + referenceRow.indexOf(columnHeader);
+//        int locationForNextWord = table.lastIndexOf("|") + referenceRow.indexOf(columnHeader);
+        int locationForNextWord = lastIndexOfBar + referenceRow.indexOf(columnHeader);
         return locationForNextWord - table.length();
     }
 
-    public static void addHeaderAndFooter(int tableLength, StringBuilder table) {
-        StringBuilder headerAndFooter = getPadding(tableLength, "|");
+    public static void addHeaderAndFooter(int referenceRowLength, StringBuilder table) {
+        StringBuilder headerAndFooter = getPadding(referenceRowLength, "|");
         headerAndFooter.append("\n");
         table.insert(0, headerAndFooter);
         table.append("\n").append(headerAndFooter);
     }
 
     public static @NotNull StringBuilder getPadding(int length, String decoration) {
-        StringBuilder headerAndFooter = new StringBuilder();
-        for (int count = 0; count < length; count++) {
+        StringBuilder headerAndFooter = new StringBuilder();for (int count = 0; count < length; count++) {
             headerAndFooter.append(decoration);
         }
         return headerAndFooter;
