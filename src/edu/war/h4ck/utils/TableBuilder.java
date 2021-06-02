@@ -1,7 +1,5 @@
 package edu.war.h4ck.utils;
 
-import org.jetbrains.annotations.NotNull;
-
 public class TableBuilder {
 
     public static void padEndOfRow(StringBuilder table, String referenceRow, int rowNumber, boolean isLastRow) {
@@ -44,7 +42,7 @@ public class TableBuilder {
         table.append("\n").append(headerAndFooter);
     }
 
-    public static @NotNull StringBuilder getPadding(int length, String decoration) {
+    public static StringBuilder getPadding(int length, String decoration) {
         StringBuilder headerAndFooter = new StringBuilder();for (int count = 0; count < length; count++) {
             headerAndFooter.append(decoration);
         }
