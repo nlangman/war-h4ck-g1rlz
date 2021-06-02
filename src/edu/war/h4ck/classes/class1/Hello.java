@@ -2,7 +2,7 @@ package edu.war.h4ck.classes.class1;
 
 public class Hello {
 
-    String greeting = null;
+    private String greeting = null;
 
     // this is the default constructor
     Hello() {
