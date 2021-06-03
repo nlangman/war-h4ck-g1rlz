@@ -16,5 +16,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Duke" level="project" />
+    <orderEntry type="library" name="apache_csv_source" level="project" />
   </component>
 </module>
