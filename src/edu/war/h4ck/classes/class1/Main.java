@@ -26,6 +26,6 @@ public class Main {
  * 1. git status    <--- shows you what changed
  * 2. git add --all <--- adds all your changes
  * 3. git commit -am "My super cool message I want you to read." <--- this saves your changes with a message on each file!
- * 4. git push <-- BOOM! put that suff on the Internet. Test.
+ * 4. git push <-- BOOM! put that suff on the Internet.
  */
 }
