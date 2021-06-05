@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="apache-csv:jar">
+    <output-path>$PROJECT_DIR$/../lib</output-path>
+    <root id="archive" name="apache-csv.jar">
+      <element id="module-output" name="apache-csv" />
+    </root>
+  </artifact>
+</component>

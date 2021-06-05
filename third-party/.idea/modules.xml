@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/apache-csv/apache-csv.iml" filepath="$PROJECT_DIR$/apache-csv/apache-csv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/duke/duke.iml" filepath="$PROJECT_DIR$/duke/duke.iml" />
+      <module fileurl="file://$PROJECT_DIR$/third-party.iml" filepath="$PROJECT_DIR$/third-party.iml" />
+    </modules>
+  </component>
+</project>
